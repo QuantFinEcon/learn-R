@@ -36,7 +36,8 @@ ui <-
       fluidRow(highchartOutput(
         "hcontainer", height = "550px", width = "100%"
       )),
-      fluidRow(pivottablerOutput(
+      hr(),
+      fluidRow(align="center",pivottablerOutput(
         "pvt", height = "550px", width = "100%"
       ))
     ),
@@ -189,7 +190,7 @@ server = function(input, output) {
         )$Date, "%b-%y"),
         title = list(text = "<b>Date</b>"),
         type = "datetime",
-        labels = list(rotation = 90),
+        labels = list(rotation = 315),
         tickmarkPlacement = "on"
       ) %>%
       hc_title(
